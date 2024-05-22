@@ -1,0 +1,8 @@
+*.yaml
+Makefile
+*.db
+.idea
+.venv
+__pycache__
+sample_data.py
+test_reg.py

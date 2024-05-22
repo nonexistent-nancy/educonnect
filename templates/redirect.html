@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weiterleitung erfolgt</title>
+    <meta http-equiv="refresh" content="3;url={{url}}">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+        .card h1 {
+            margin-top: 0;
+        }
+        .card p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Du wirst weitergeleitet...</h2>
+        <p>Wenn die Weiterleitung nicht automatisch erfolgt, klicke <a href="{{url}}">hier</a>.</p>
+    </div>
+</body>
+</html>

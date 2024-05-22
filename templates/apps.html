@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Willkommen, {{ user [6] }}</title>
+    <link rel="stylesheet" href="/static/skibidicss.css">
+</head>
+<body>
+    <h1>Willkommen zurück, {{ user[6] }}</h1>
+    <p>Hier sind alle tollen Apps, die supertolle Dinge tun, um EduConnect noch besser zu machen. Falls dir das zu viel wird, kannst du die Apps auch wieder entfernen.</p>
+
+    <h2>Deine Apps</h2>
+    <ul>
+        {% for app in apps %}
+            <li>
+                <h3>{{ app[1] }}</h3>
+                <ul>
+                    {% for scope in app[6].split(",") %}
+                        {% if scopes[scope] %}
+                            <li>{{ scopes[scope] }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <a href="/app/prefs/apps/revoke?client_id={{ app[2] }}">Entfernen</a>
+            </li>
+        {% endfor %}
+</body>
+</html>
